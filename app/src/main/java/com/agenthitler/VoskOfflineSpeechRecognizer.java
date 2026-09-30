@@ -32,11 +32,18 @@ public final class VoskOfflineSpeechRecognizer implements SpeechRecognizerEngine
                 byte[] buffer = new byte[Math.max(min, 4096)];
                 running = true; recorder.startRecording();
                 Log.i("GASY", "Vosk offline STT ready");
+                long deadline = System.currentTimeMillis() + 6000;
                 while (running) {
                     int n = recorder.read(buffer, 0, buffer.length);
                     if (n > 0 && recognizer.acceptWaveForm(buffer, n)) {
                         String text = extract(recognizer.getResult());
                         if (!text.isEmpty()) { cb.onResult(SpeechResult.ok(text)); break; }
+                    }
+                    if (System.currentTimeMillis() >= deadline) {
+                        String text = extract(recognizer.getFinalResult());
+                        Log.i("GASY", "Vosk final transcript: " + text);
+                        cb.onResult(text.isEmpty() ? SpeechResult.fail("No offline speech recognized") : SpeechResult.ok(text));
+                        break;
                     }
                 }
                 recognizer.close();

@@ -60,6 +60,12 @@ The first release build was rejected by lint because target API 30 is expired. I
 
 The signed release APK is about 550 MB because it contains both the Vosk model and Qwen model. It installed on the OnePlus, the app process stayed alive, and Android reported `GasyListeningService isForeground=true` after the listener was started and the screen was locked.
 
+## 2026-10-01 — typed and ADB command controls
+
+Added a command text box and `SEND COMMAND` button to the GASY HUD. Added the `com.agenthitler.COMMAND` activity action so the Mac can send a command directly with ADB using `--es text "open YouTube"`. This gives us a deterministic test path while microphone testing is still being diagnosed.
+
+TTS now prefers an available local US-English female voice to make the response closer to a Siri-like voice. Apple’s proprietary Siri voice itself cannot be installed through Android APIs.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.

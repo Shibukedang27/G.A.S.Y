@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.EditText;
 import android.speech.tts.TextToSpeech;
 import java.util.Locale;
 import android.content.pm.PackageManager;
@@ -18,6 +19,7 @@ public class MainActivity extends Activity {
     public static final String ACTION_INSTALL_LLM = "com.agenthitler.INSTALL_LLM";
     public static final String ACTION_TEST_LLM = "com.agenthitler.TEST_LLM";
     public static final String ACTION_TEST_NATIVE = "com.agenthitler.TEST_NATIVE";
+    public static final String ACTION_COMMAND = "com.agenthitler.COMMAND";
     private TextView status;
     private TextToSpeech tts;
     private SpeechRecognizerEngine speech;
@@ -26,12 +28,15 @@ public class MainActivity extends Activity {
     private WakePhraseListener wake;
     private LocalActionPlanner planner;
     private VoiceProfileStore voiceProfile;
+    private EditText commandInput;
     private final android.content.BroadcastReceiver wakeReceiver = new android.content.BroadcastReceiver(){ public void onReceive(android.content.Context c, android.content.Intent i){ String r=i.getStringExtra("remainder"); runOnUiThread(()->{ setState(AssistantState.LISTENING,"GASY DETECTED"); if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake"); if(r==null||r.isEmpty())listenTextOnly(); else routeRecognized(r); }); }};
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         LinearLayout root = new LinearLayout(this); root.setOrientation(LinearLayout.VERTICAL); root.setPadding(40,60,40,40); root.setGravity(Gravity.CENTER_HORIZONTAL); root.setBackgroundColor(Color.rgb(10,10,10));
         TextView title = new TextView(this); title.setText("GASY"); title.setTextColor(Color.RED); title.setTextSize(28); root.addView(title);
         status = new TextView(this); status.setText("Ready. Say: GASY"); status.setTextColor(Color.WHITE); status.setTextSize(16); status.setPadding(0,30,0,30); root.addView(status);
+        commandInput = new EditText(this); commandInput.setHint("Type a command for GASY"); commandInput.setSingleLine(true); commandInput.setTextColor(Color.WHITE); commandInput.setHintTextColor(Color.GRAY); root.addView(commandInput);
+        Button send = new Button(this); send.setText("SEND COMMAND"); send.setOnClickListener(v -> routeRecognized(commandInput.getText().toString())); root.addView(send);
         Button test = new Button(this); test.setText("RUN TEST COMMAND"); test.setOnClickListener(v -> handleTest()); root.addView(test);
         Button listen = new Button(this); listen.setText("LISTEN FOR COMMAND"); listen.setOnClickListener(v -> listen()); root.addView(listen);
         Button wakeButton = new Button(this); wakeButton.setText("START GASY WAKE LISTENER"); wakeButton.setOnClickListener(v -> startWakeListener()); root.addView(wakeButton);
@@ -39,7 +44,7 @@ public class MainActivity extends Activity {
         Button settings = new Button(this); settings.setText("OPEN ACCESSIBILITY SETTINGS"); settings.setOnClickListener(v -> startActivity(new Intent("android.settings.ACCESSIBILITY_SETTINGS"))); root.addView(settings);
         Button enroll = new Button(this); enroll.setText("ENROLL MY VOICE"); enroll.setOnClickListener(v -> enrollVoice()); root.addView(enroll);
         setContentView(root);
-        tts = new TextToSpeech(this, s -> { if (s == TextToSpeech.SUCCESS) tts.setLanguage(Locale.US); });
+        tts = new TextToSpeech(this, s -> { if (s == TextToSpeech.SUCCESS) { tts.setLanguage(Locale.US); for(android.speech.tts.Voice v:tts.getVoices()) if(v.getLocale().equals(Locale.US) && !v.isNetworkConnectionRequired() && v.getName().toLowerCase(Locale.US).contains("female")){tts.setVoice(v);break;} } });
         speech = new VoskOfflineSpeechRecognizer(this);
         memory = new AssistantMemory(this);
         wake = new WakePhraseListener(speech);
@@ -49,6 +54,7 @@ public class MainActivity extends Activity {
         if(ACTION_INSTALL_LLM.equals(getIntent().getAction())) installLocalLlm();
         if(ACTION_TEST_LLM.equals(getIntent().getAction())) testLocalLlm();
         if(ACTION_TEST_NATIVE.equals(getIntent().getAction())) testNativeLlm();
+        if(ACTION_COMMAND.equals(getIntent().getAction())) routeRecognized(getIntent().getStringExtra("text"));
     }
     private void listen(){ if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;} setState(AssistantState.LISTENING,"LISTENING..."); speech.start(r->{runOnUiThread(()->{if(!r.success){memory.record("<speech>",false,r.error);setState(AssistantState.ERROR,"I couldn't hear that, sir.");return;} setState(AssistantState.PROCESSING,"Heard: "+r.text); CommandPlan p=CommandRouter.parse(r.text); if(!ActionValidator.valid(p)){memory.record(r.text,false,"Unknown command");setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;} if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;} setState(AssistantState.EXECUTING,"EXECUTING..."); ActionResult ar=AgentAccessibilityService.instance.execute(p.actions.get(0));memory.record(r.text,ar.success,ar.message);setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message); if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"agent-response");});}); }
     private void startWakeListener(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.IDLE,"IDLE — waiting for GASY");Intent i=new Intent(this,GasyListeningService.class);if(android.os.Build.VERSION.SDK_INT>=26)startForegroundService(i);else startService(i);}
@@ -75,5 +81,5 @@ public class MainActivity extends Activity {
         if(tts!=null) tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"agent-response");
     }
     @Override protected void onDestroy(){try{unregisterReceiver(wakeReceiver);}catch(Exception ignored){}if(wake!=null)wake.stop();if(speech!=null)speech.destroy();if(planner!=null)planner.close();if(tts!=null){tts.stop();tts.shutdown();}super.onDestroy();}
-    @Override protected void onNewIntent(Intent intent) { super.onNewIntent(intent); if (ACTION_TEST.equals(intent.getAction())) handleTest(); if (ACTION_INSTALL_LLM.equals(intent.getAction())) installLocalLlm(); if (ACTION_TEST_LLM.equals(intent.getAction())) testLocalLlm(); if (ACTION_TEST_NATIVE.equals(intent.getAction())) testNativeLlm(); }
+    @Override protected void onNewIntent(Intent intent) { super.onNewIntent(intent); if (ACTION_TEST.equals(intent.getAction())) handleTest(); if (ACTION_INSTALL_LLM.equals(intent.getAction())) installLocalLlm(); if (ACTION_TEST_LLM.equals(intent.getAction())) testLocalLlm(); if (ACTION_TEST_NATIVE.equals(intent.getAction())) testNativeLlm(); if (ACTION_COMMAND.equals(intent.getAction())) routeRecognized(intent.getStringExtra("text")); }
 }
