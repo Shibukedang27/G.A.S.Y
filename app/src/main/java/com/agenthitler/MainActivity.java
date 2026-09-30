@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     public static final String ACTION_TEST_NATIVE = "com.agenthitler.TEST_NATIVE";
     private TextView status;
     private TextToSpeech tts;
-    private AndroidSpeechRecognizer speech;
+    private SpeechRecognizerEngine speech;
     private AssistantMemory memory;
     private AssistantState state=AssistantState.IDLE;
     private WakePhraseListener wake;
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         Button settings = new Button(this); settings.setText("OPEN ACCESSIBILITY SETTINGS"); settings.setOnClickListener(v -> startActivity(new Intent("android.settings.ACCESSIBILITY_SETTINGS"))); root.addView(settings);
         setContentView(root);
         tts = new TextToSpeech(this, s -> { if (s == TextToSpeech.SUCCESS) tts.setLanguage(Locale.US); });
-        speech = new AndroidSpeechRecognizer(this);
+        speech = new VoskOfflineSpeechRecognizer(this);
         memory = new AssistantMemory(this);
         wake = new WakePhraseListener(speech);
         if(ACTION_INSTALL_LLM.equals(getIntent().getAction())) installLocalLlm();
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         if(ACTION_TEST_NATIVE.equals(getIntent().getAction())) testNativeLlm();
     }
     private void listen(){ if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;} setState(AssistantState.LISTENING,"LISTENING..."); speech.start(r->{runOnUiThread(()->{if(!r.success){memory.record("<speech>",false,r.error);setState(AssistantState.ERROR,"I couldn't hear that, sir.");return;} setState(AssistantState.PROCESSING,"Heard: "+r.text); CommandPlan p=CommandRouter.parse(r.text); if(!ActionValidator.valid(p)){memory.record(r.text,false,"Unknown command");setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;} if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;} setState(AssistantState.EXECUTING,"EXECUTING..."); ActionResult ar=AgentAccessibilityService.instance.execute(p.actions.get(0));memory.record(r.text,ar.success,ar.message);setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message); if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"agent-response");});}); }
-    private void startWakeListener(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.IDLE,"IDLE — waiting for GASY");wake.start((phrase,remainder)->runOnUiThread(()->{setState(AssistantState.LISTENING,"WAKE_DETECTED "+phrase);if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake");if(remainder.isEmpty())listenTextOnly();else routeRecognized(remainder);}));}
+    private void startWakeListener(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.IDLE,"EXPERIMENTAL — waiting for Hitler / Agent Hitler");wake.start((phrase,remainder)->runOnUiThread(()->{setState(AssistantState.LISTENING,"PHRASE_DETECTED "+phrase);if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake");if(remainder.isEmpty())listenTextOnly();else routeRecognized(remainder);}));}
     private void listenTextOnly(){setState(AssistantState.LISTENING,"LISTENING...");speech.start(r->{runOnUiThread(()->{if(r.success)routeRecognized(r.text);else setState(AssistantState.ERROR,"I couldn't hear that, sir.");});});}
     private void routeRecognized(String text){CommandPlan p=CommandRouter.parse(text);if(!ActionValidator.valid(p)){setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;}if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;}setState(AssistantState.EXECUTING,"EXECUTING...");ActionResult ar=AgentAccessibilityService.instance.execute(p.actions.get(0));setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message);if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"response");}
     private void setState(AssistantState s,String text){state=s;status.setText(text);}

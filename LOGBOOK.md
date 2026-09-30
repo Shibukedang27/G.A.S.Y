@@ -14,6 +14,14 @@ I changed the speech recognizer request to explicitly prefer offline recognition
 
 Important honest bit: this is the Android offline-recognition path, not a bundled neural STT model yet. If the OnePlus does not have an English offline language pack installed, Android will still fail or fall back according to the phone’s service. The next check is to run GASY on the phone with internet disabled and see the actual result.
 
+## 2026-10-01 — bundled offline STT completed
+
+The Android offline-preference route was not enough, so I added a real local Vosk engine with the small English model bundled in the app. It unpacks into private phone storage on first use and reads microphone audio locally through AudioRecord.
+
+I installed the new APK on the OnePlus, granted microphone and Accessibility permissions over ADB, started the GASY listener, and got the real phone log: `Vosk offline STT ready`. The app stayed alive with no crash or ANR. This is the first proper offline STT milestone.
+
+Next things after this step: verify that Vosk returns the word GASY from the actual microphone, then connect the recognized command text to the action router and only after that connect the local LLM JSON parser.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
