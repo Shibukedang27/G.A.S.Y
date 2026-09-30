@@ -42,6 +42,10 @@ Verified on the OnePlus through ADB: Android reported `isForeground=true`, foreg
 
 Also increased retry backoff to five seconds so repeated empty/error microphone cycles do not spin hard and waste battery. The listener still remains available for the next real phrase.
 
+## 2026-10-01 — confirmation boundary added
+
+Added a central action-confirmation policy. Calls, SMS, and destructive-content action types are now classified as sensitive and are rejected at the execution boundary until an explicit confirmation UI is connected. The model cannot silently perform those actions just by producing JSON.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
