@@ -1,6 +1,7 @@
 .gradle/
 build/
 app/build/
+app/.cxx/
 work/
 outputs/
 *.hprof
