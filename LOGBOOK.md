@@ -126,6 +126,10 @@ The phone reported speech recognition as unavailable even though the Google reco
 
 I granted permissions, started the GASY listener over ADB, and played “GASY” from the Mac speakers. The app stayed alive, but the phone did not detect the word. This was a real test failure, not a success: the phone may not have been close enough to the speakers, and Android speech recognition may still need a working network/service configuration.
 
+## 2026-10-01 — grammar-constrained Vosk wake path
+
+Vosk API inspection showed grammar-constrained recognition is available. Added a local grammar containing GASY variants plus supported command words and `[unk]`, so wake words are no longer competing against the full English vocabulary. This is intended to address the observed `huh` transcript while keeping command words available after wake.
+
 ## What is not finished yet
 
 - Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
