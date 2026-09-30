@@ -48,6 +48,10 @@ Added a central action-confirmation policy. Calls, SMS, and destructive-content 
 
 The confirmation boundary is now a real dialog: sensitive actions show Cancel and Confirm buttons, and only Confirm reaches AccessibilityService.
 
+## 2026-10-01 — local voice enrollment added
+
+Added local voice-profile storage and an enrollment button. GASY records a short microphone sample and stores only a small local fingerprint made from amplitude and zero-crossing features. This is a lightweight gate, not a full neural speaker-embedding system yet; the heavier speaker model remains a later upgrade.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.

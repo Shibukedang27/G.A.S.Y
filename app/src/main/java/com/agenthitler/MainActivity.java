@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     private AssistantState state=AssistantState.IDLE;
     private WakePhraseListener wake;
     private LocalActionPlanner planner;
+    private VoiceProfileStore voiceProfile;
     private final android.content.BroadcastReceiver wakeReceiver = new android.content.BroadcastReceiver(){ public void onReceive(android.content.Context c, android.content.Intent i){ String r=i.getStringExtra("remainder"); runOnUiThread(()->{ setState(AssistantState.LISTENING,"GASY DETECTED"); if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake"); if(r==null||r.isEmpty())listenTextOnly(); else routeRecognized(r); }); }};
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -36,12 +37,14 @@ public class MainActivity extends Activity {
         Button wakeButton = new Button(this); wakeButton.setText("START GASY WAKE LISTENER"); wakeButton.setOnClickListener(v -> startWakeListener()); root.addView(wakeButton);
         Button llm = new Button(this); llm.setText("INSTALL LOCAL LLM IN TERMUX"); llm.setOnClickListener(v -> installLocalLlm()); root.addView(llm);
         Button settings = new Button(this); settings.setText("OPEN ACCESSIBILITY SETTINGS"); settings.setOnClickListener(v -> startActivity(new Intent("android.settings.ACCESSIBILITY_SETTINGS"))); root.addView(settings);
+        Button enroll = new Button(this); enroll.setText("ENROLL MY VOICE"); enroll.setOnClickListener(v -> enrollVoice()); root.addView(enroll);
         setContentView(root);
         tts = new TextToSpeech(this, s -> { if (s == TextToSpeech.SUCCESS) tts.setLanguage(Locale.US); });
         speech = new VoskOfflineSpeechRecognizer(this);
         memory = new AssistantMemory(this);
         wake = new WakePhraseListener(speech);
         planner = new LocalActionPlanner(this);
+        voiceProfile = new VoiceProfileStore(this);
         registerReceiver(wakeReceiver, new android.content.IntentFilter(GasyListeningService.ACTION_WAKE));
         if(ACTION_INSTALL_LLM.equals(getIntent().getAction())) installLocalLlm();
         if(ACTION_TEST_LLM.equals(getIntent().getAction())) testLocalLlm();
@@ -54,6 +57,7 @@ public class MainActivity extends Activity {
     private void executePlan(CommandPlan p){if(!ActionValidator.valid(p)){setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;}Action action=p.actions.get(0);if(ActionConfirmation.required(action)){new android.app.AlertDialog.Builder(this).setTitle("GASY confirmation").setMessage("This action can affect your phone or another person. Continue?").setNegativeButton("Cancel",(d,w)->setState(AssistantState.ERROR,"Cancelled, sir.")).setPositiveButton("Confirm",(d,w)->executeAction(action)).show();return;}executeAction(action);}
     private void executeAction(Action action){if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;}setState(AssistantState.EXECUTING,"EXECUTING...");ActionResult ar=AgentAccessibilityService.instance.execute(action);setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message);if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"response");}
     private void setState(AssistantState s,String text){state=s;status.setText(text);}
+    private void enrollVoice(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.LISTENING,"SPEAK FOR ENROLLMENT...");new Thread(()->{int min=android.media.AudioRecord.getMinBufferSize(16000,16,2);android.media.AudioRecord r=new android.media.AudioRecord(android.media.MediaRecorder.AudioSource.MIC,16000,16,2,Math.max(min*2,8192));try{r.startRecording();short[] b=new short[1600];float sum=0,zc=0;short prev=0;int n=0;long end=System.currentTimeMillis()+3000;while(System.currentTimeMillis()<end){int k=r.read(b,0,b.length);for(int i=0;i<k;i++){sum+=Math.abs(b[i])/32768f;if((b[i]>=0)!=(prev>=0))zc++;prev=b[i];n++;}}voiceProfile.save(new float[]{n==0?0:sum/n,n==0?0:zc/n});runOnUiThread(()->setState(AssistantState.SUCCESS,"Voice enrolled locally, sir."));}finally{r.stop();r.release();}}).start();}
     private void installLocalLlm(){
         Intent i=new Intent("com.termux.RUN_COMMAND"); i.setClassName("com.termux","com.termux.app.RunCommandService");
         i.putExtra("com.termux.RUN_COMMAND_PATH","/data/data/com.termux/files/usr/bin/bash");
