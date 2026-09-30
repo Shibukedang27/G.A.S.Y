@@ -26,6 +26,10 @@ Next things after this step: verify that Vosk returns the word GASY from the act
 
 The offline STT is now connected to the existing command path instead of stopping at transcription. GASY detection hands the remaining speech to the router, and the router can now handle app opening, home/back, screenshots, settings, volume, media controls, scrolling, and web search. The app still validates the action before AccessibilityService executes it.
 
+## 2026-10-01 — strict action parser started
+
+Added the first strict JSON boundary for the local model. It accepts only an `actions` array, limits the number of actions, maps types to the approved `Action.Type` enum, and rejects malformed or unknown output before AccessibilityService sees it. The native Qwen planner still needs to be wired into this parser next.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
