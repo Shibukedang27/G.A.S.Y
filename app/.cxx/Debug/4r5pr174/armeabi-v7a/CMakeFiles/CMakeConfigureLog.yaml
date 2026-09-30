@@ -1,0 +1,2211 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+    searched_directories:
+      - "/Users/maniacsday/.local/bin/uname"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/uname"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:213 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: Android - 1 - armv7-a
+      The host system is: Darwin - 27.0.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang 
+      Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-march=armv7-a;-mthumb;-Wformat;-Werror=format-security
+      Id flags: -c;--target=armv7-none-linux-androideabi30 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/4.4.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld.lld"
+      - "ld"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-nm"
+      - "nm"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-nm"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objdump"
+      - "objdump"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-objdump"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-objcopy"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-readelf"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-dlltool"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-addr2line"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/tapi"
+      - "/Users/maniacsday/.local/bin/tapi"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/tapi"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+      - "/pkg/env/global/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/tapi"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/tapi"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/tapi"
+      - "/Applications/ChatGPT.app/Contents/Resources/tapi"
+      - "/usr/lib/arm-linux-androideabi/30/bin/tapi"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/tapi"
+      - "/usr/lib/arm-linux-androideabi/30/tapi"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-18.0"
+      - "llvm-ar-18"
+      - "llvm-ar18"
+      - "llvm-ar"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/.local/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar-18.0"
+      - "/opt/homebrew/bin/llvm-ar-18.0"
+      - "/opt/homebrew/sbin/llvm-ar-18.0"
+      - "/usr/local/bin/llvm-ar-18.0"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-18.0"
+      - "/usr/bin/llvm-ar-18.0"
+      - "/bin/llvm-ar-18.0"
+      - "/usr/sbin/llvm-ar-18.0"
+      - "/sbin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-18.0"
+      - "/pkg/env/global/bin/llvm-ar-18.0"
+      - "/Library/Apple/usr/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar-18"
+      - "/Users/maniacsday/.local/bin/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar-18"
+      - "/opt/homebrew/bin/llvm-ar-18"
+      - "/opt/homebrew/sbin/llvm-ar-18"
+      - "/usr/local/bin/llvm-ar-18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-18"
+      - "/usr/bin/llvm-ar-18"
+      - "/bin/llvm-ar-18"
+      - "/usr/sbin/llvm-ar-18"
+      - "/sbin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-18"
+      - "/pkg/env/global/bin/llvm-ar-18"
+      - "/Library/Apple/usr/bin/llvm-ar-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar18"
+      - "/Users/maniacsday/.local/bin/llvm-ar18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar18"
+      - "/opt/homebrew/bin/llvm-ar18"
+      - "/opt/homebrew/sbin/llvm-ar18"
+      - "/usr/local/bin/llvm-ar18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar18"
+      - "/usr/bin/llvm-ar18"
+      - "/bin/llvm-ar18"
+      - "/usr/sbin/llvm-ar18"
+      - "/sbin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar18"
+      - "/pkg/env/global/bin/llvm-ar18"
+      - "/Library/Apple/usr/bin/llvm-ar18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-18.0"
+      - "llvm-ranlib-18"
+      - "llvm-ranlib18"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib-18.0"
+      - "/opt/homebrew/bin/llvm-ranlib-18.0"
+      - "/opt/homebrew/sbin/llvm-ranlib-18.0"
+      - "/usr/local/bin/llvm-ranlib-18.0"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-18.0"
+      - "/usr/bin/llvm-ranlib-18.0"
+      - "/bin/llvm-ranlib-18.0"
+      - "/usr/sbin/llvm-ranlib-18.0"
+      - "/sbin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-18.0"
+      - "/pkg/env/global/bin/llvm-ranlib-18.0"
+      - "/Library/Apple/usr/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib-18"
+      - "/opt/homebrew/bin/llvm-ranlib-18"
+      - "/opt/homebrew/sbin/llvm-ranlib-18"
+      - "/usr/local/bin/llvm-ranlib-18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-18"
+      - "/usr/bin/llvm-ranlib-18"
+      - "/bin/llvm-ranlib-18"
+      - "/usr/sbin/llvm-ranlib-18"
+      - "/sbin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-18"
+      - "/pkg/env/global/bin/llvm-ranlib-18"
+      - "/Library/Apple/usr/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib18"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib18"
+      - "/opt/homebrew/bin/llvm-ranlib18"
+      - "/opt/homebrew/sbin/llvm-ranlib18"
+      - "/usr/local/bin/llvm-ranlib18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib18"
+      - "/usr/bin/llvm-ranlib18"
+      - "/bin/llvm-ranlib18"
+      - "/usr/sbin/llvm-ranlib18"
+      - "/sbin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib18"
+      - "/pkg/env/global/bin/llvm-ranlib18"
+      - "/Library/Apple/usr/bin/llvm-ranlib18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-18.0"
+      - "clang-scan-deps-18"
+      - "clang-scan-deps18"
+      - "clang-scan-deps"
+      - "clang-scan-deps-18.0"
+      - "clang-scan-deps-18"
+      - "clang-scan-deps18"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps-18.0"
+      - "/opt/homebrew/bin/clang-scan-deps-18.0"
+      - "/opt/homebrew/sbin/clang-scan-deps-18.0"
+      - "/usr/local/bin/clang-scan-deps-18.0"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-18.0"
+      - "/usr/bin/clang-scan-deps-18.0"
+      - "/bin/clang-scan-deps-18.0"
+      - "/usr/sbin/clang-scan-deps-18.0"
+      - "/sbin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-18.0"
+      - "/pkg/env/global/bin/clang-scan-deps-18.0"
+      - "/Library/Apple/usr/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps-18"
+      - "/opt/homebrew/bin/clang-scan-deps-18"
+      - "/opt/homebrew/sbin/clang-scan-deps-18"
+      - "/usr/local/bin/clang-scan-deps-18"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-18"
+      - "/usr/bin/clang-scan-deps-18"
+      - "/bin/clang-scan-deps-18"
+      - "/usr/sbin/clang-scan-deps-18"
+      - "/sbin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-18"
+      - "/pkg/env/global/bin/clang-scan-deps-18"
+      - "/Library/Apple/usr/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps18"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps18"
+      - "/opt/homebrew/bin/clang-scan-deps18"
+      - "/opt/homebrew/sbin/clang-scan-deps18"
+      - "/usr/local/bin/clang-scan-deps18"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps18"
+      - "/usr/bin/clang-scan-deps18"
+      - "/bin/clang-scan-deps18"
+      - "/usr/sbin/clang-scan-deps18"
+      - "/sbin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps18"
+      - "/pkg/env/global/bin/clang-scan-deps18"
+      - "/Library/Apple/usr/bin/clang-scan-deps18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps18"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ 
+      Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D_FORTIFY_SOURCE=2;-march=armv7-a;-mthumb;-Wformat;-Werror=format-security
+      Id flags: -c;--target=armv7-none-linux-androideabi30 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        /Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/4.4.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-18.0"
+      - "llvm-ar-18"
+      - "llvm-ar18"
+      - "llvm-ar"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/.local/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar-18.0"
+      - "/opt/homebrew/bin/llvm-ar-18.0"
+      - "/opt/homebrew/sbin/llvm-ar-18.0"
+      - "/usr/local/bin/llvm-ar-18.0"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-18.0"
+      - "/usr/bin/llvm-ar-18.0"
+      - "/bin/llvm-ar-18.0"
+      - "/usr/sbin/llvm-ar-18.0"
+      - "/sbin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-18.0"
+      - "/pkg/env/global/bin/llvm-ar-18.0"
+      - "/Library/Apple/usr/bin/llvm-ar-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar-18"
+      - "/Users/maniacsday/.local/bin/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar-18"
+      - "/opt/homebrew/bin/llvm-ar-18"
+      - "/opt/homebrew/sbin/llvm-ar-18"
+      - "/usr/local/bin/llvm-ar-18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-18"
+      - "/usr/bin/llvm-ar-18"
+      - "/bin/llvm-ar-18"
+      - "/usr/sbin/llvm-ar-18"
+      - "/sbin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-18"
+      - "/pkg/env/global/bin/llvm-ar-18"
+      - "/Library/Apple/usr/bin/llvm-ar-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar-18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar18"
+      - "/Users/maniacsday/.local/bin/llvm-ar18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ar18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ar18"
+      - "/opt/homebrew/bin/llvm-ar18"
+      - "/opt/homebrew/sbin/llvm-ar18"
+      - "/usr/local/bin/llvm-ar18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar18"
+      - "/usr/bin/llvm-ar18"
+      - "/bin/llvm-ar18"
+      - "/usr/sbin/llvm-ar18"
+      - "/sbin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar18"
+      - "/pkg/env/global/bin/llvm-ar18"
+      - "/Library/Apple/usr/bin/llvm-ar18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ar18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ar18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ar18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ar18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ar18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-18.0"
+      - "llvm-ranlib-18"
+      - "llvm-ranlib18"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib-18.0"
+      - "/opt/homebrew/bin/llvm-ranlib-18.0"
+      - "/opt/homebrew/sbin/llvm-ranlib-18.0"
+      - "/usr/local/bin/llvm-ranlib-18.0"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-18.0"
+      - "/usr/bin/llvm-ranlib-18.0"
+      - "/bin/llvm-ranlib-18.0"
+      - "/usr/sbin/llvm-ranlib-18.0"
+      - "/sbin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-18.0"
+      - "/pkg/env/global/bin/llvm-ranlib-18.0"
+      - "/Library/Apple/usr/bin/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib-18"
+      - "/opt/homebrew/bin/llvm-ranlib-18"
+      - "/opt/homebrew/sbin/llvm-ranlib-18"
+      - "/usr/local/bin/llvm-ranlib-18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-18"
+      - "/usr/bin/llvm-ranlib-18"
+      - "/bin/llvm-ranlib-18"
+      - "/usr/sbin/llvm-ranlib-18"
+      - "/sbin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-18"
+      - "/pkg/env/global/bin/llvm-ranlib-18"
+      - "/Library/Apple/usr/bin/llvm-ranlib-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib-18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib18"
+      - "/Users/maniacsday/.local/bin/llvm-ranlib18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/llvm-ranlib18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/llvm-ranlib18"
+      - "/opt/homebrew/bin/llvm-ranlib18"
+      - "/opt/homebrew/sbin/llvm-ranlib18"
+      - "/usr/local/bin/llvm-ranlib18"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib18"
+      - "/usr/bin/llvm-ranlib18"
+      - "/bin/llvm-ranlib18"
+      - "/usr/sbin/llvm-ranlib18"
+      - "/sbin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib18"
+      - "/pkg/env/global/bin/llvm-ranlib18"
+      - "/Library/Apple/usr/bin/llvm-ranlib18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/llvm-ranlib18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/llvm-ranlib18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/llvm-ranlib18"
+      - "/Applications/ChatGPT.app/Contents/Resources/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/llvm-ranlib18"
+      - "/usr/lib/arm-linux-androideabi/30/llvm-ranlib18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-18.0"
+      - "clang-scan-deps-18"
+      - "clang-scan-deps18"
+      - "clang-scan-deps"
+      - "clang-scan-deps-18.0"
+      - "clang-scan-deps-18"
+      - "clang-scan-deps18"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/"
+      - "/Users/maniacsday/.local/bin/"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/"
+      - "/Applications/ChatGPT.app/Contents/Resources/"
+      - "/usr/lib/arm-linux-androideabi/30/bin/"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/"
+      - "/usr/lib/arm-linux-androideabi/30/"
+    searched_directories:
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps-18.0"
+      - "/opt/homebrew/bin/clang-scan-deps-18.0"
+      - "/opt/homebrew/sbin/clang-scan-deps-18.0"
+      - "/usr/local/bin/clang-scan-deps-18.0"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-18.0"
+      - "/usr/bin/clang-scan-deps-18.0"
+      - "/bin/clang-scan-deps-18.0"
+      - "/usr/sbin/clang-scan-deps-18.0"
+      - "/sbin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-18.0"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-18.0"
+      - "/pkg/env/global/bin/clang-scan-deps-18.0"
+      - "/Library/Apple/usr/bin/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps-18.0"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps-18.0"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps-18.0"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps-18.0"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps-18"
+      - "/opt/homebrew/bin/clang-scan-deps-18"
+      - "/opt/homebrew/sbin/clang-scan-deps-18"
+      - "/usr/local/bin/clang-scan-deps-18"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-18"
+      - "/usr/bin/clang-scan-deps-18"
+      - "/bin/clang-scan-deps-18"
+      - "/usr/sbin/clang-scan-deps-18"
+      - "/sbin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-18"
+      - "/pkg/env/global/bin/clang-scan-deps-18"
+      - "/Library/Apple/usr/bin/clang-scan-deps-18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps-18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps-18"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps-18"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps-18"
+      - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps18"
+      - "/Users/maniacsday/.local/bin/clang-scan-deps18"
+      - "/Users/maniacsday/Library/Android/sdk/platform-tools/clang-scan-deps18"
+      - "/Users/maniacsday/Library/Android/sdk/emulator/clang-scan-deps18"
+      - "/opt/homebrew/bin/clang-scan-deps18"
+      - "/opt/homebrew/sbin/clang-scan-deps18"
+      - "/usr/local/bin/clang-scan-deps18"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps18"
+      - "/usr/bin/clang-scan-deps18"
+      - "/bin/clang-scan-deps18"
+      - "/usr/sbin/clang-scan-deps18"
+      - "/sbin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps18"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps18"
+      - "/pkg/env/global/bin/clang-scan-deps18"
+      - "/Library/Apple/usr/bin/clang-scan-deps18"
+      - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU/clang-scan-deps18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/clang-scan-deps18"
+      - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/clang-scan-deps18"
+      - "/Applications/ChatGPT.app/Contents/Resources/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/bin/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/sbin/clang-scan-deps18"
+      - "/usr/lib/arm-linux-androideabi/30/clang-scan-deps18"
+    found: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64"
+      ENV{PATH}:
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/Users/maniacsday/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/maniacsday/.codex/tmp/arg0/codex-arg0a295jU"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override"
+        - "/Users/maniacsday/.local/bin"
+        - "/Users/maniacsday/Library/Android/sdk/platform-tools"
+        - "/Users/maniacsday/Library/Android/sdk/emulator"
+        - "/opt/homebrew/sbin"
+        - "/Users/maniacsday/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback"
+        - "/Applications/ChatGPT.app/Contents/Resources"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/lib/arm-linux-androideabi/30"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+      CMAKE_FIND_ROOT_PATH: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k"
+      binary: "/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k"
+    cmakeVariables:
+      ANDROID_ABI: "armeabi-v7a"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PIE: "TRUE"
+      ANDROID_PLATFORM: "android-30"
+      ANDROID_STL: "c++_static"
+      ANDROID_TOOLCHAIN: "clang"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps"
+      CMAKE_CXX_COMPILER_TARGET: "armv7-none-linux-androideabi30"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_COMPILER_TARGET: "armv7-none-linux-androideabi30"
+      CMAKE_C_FLAGS: "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat "
+      CMAKE_C_FLAGS_DEBUG: "-fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k'
+        
+        Run Build Command(s): /Users/maniacsday/Library/Android/sdk/cmake/3.22.1/bin/ninja -v cmTC_ebd4b
+        [1/2] /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat   -fPIE   -v -MD -MT CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Android (12027248, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+        Target: armv7-none-linux-android30
+        Thread model: posix
+        InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin
+         (in-process)
+         "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang" -cc1 -triple thumbv7-none-linux-android30 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k -resource-dir /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.0.1 based upon LLVM 18.0.1 default target x86_64-apple-darwin27.0.0
+        ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"
+        ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include
+        End of search list.
+        [2/2] : && /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -o cmTC_ebd4b   && :
+        Android (12027248, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+        Target: armv7-none-linux-android30
+        Thread model: posix
+        InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin
+         "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_ebd4b /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        implicit include dirs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Users/maniacsday/Library/Android/sdk/cmake/3.22.1/bin/ninja -v cmTC_ebd4b]
+        ignore line: [[1/2] /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat   -fPIE   -v -MD -MT CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Android (12027248  +pgo  -bolt  +lto  -mlgo  based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+        ignore line: [Target: armv7-none-linux-android30]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang" -cc1 -triple thumbv7-none-linux-android30 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-mO6a7k -resource-dir /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.0.1 based upon LLVM 18.0.1 default target x86_64-apple-darwin27.0.0]
+        ignore line: [ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -static-libstdc++ -Wl --build-id=sha1 -Wl --no-undefined-version -Wl --fatal-warnings -Wl --no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o -o cmTC_ebd4b   && :]
+        ignore line: [Android (12027248  +pgo  -bolt  +lto  -mlgo  based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+        ignore line: [Target: armv7-none-linux-android30]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_ebd4b /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> linker [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_ebd4b /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> linker architecture flags [-m;armelf]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_ebd4b /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld] ==> ignore
+          arg [--sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-zmax-page-size=4096] ==> ignore
+          arg [-X] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_ebd4b] ==> ignore
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o] ==> obj [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+          arg [--build-id=sha1] ==> ignore
+          arg [--no-undefined-version] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [--no-undefined] ==> ignore
+          arg [CMakeFiles/cmTC_ebd4b.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> obj [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+        linker tool for 'C': /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld -m;armelf
+        remove lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+        remove lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        implicit libs: [-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+        implicit objs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+        implicit dirs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" "-v"
+      LLD 18.0.1 (compatible with GNU linkers)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp"
+      binary: "/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp"
+    cmakeVariables:
+      ANDROID_ABI: "armeabi-v7a"
+      ANDROID_ARM_MODE: "thumb"
+      ANDROID_ARM_NEON: "TRUE"
+      ANDROID_PIE: "TRUE"
+      ANDROID_PLATFORM: "android-30"
+      ANDROID_STL: "c++_static"
+      ANDROID_TOOLCHAIN: "clang"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang-scan-deps"
+      CMAKE_CXX_COMPILER_TARGET: "armv7-none-linux-androideabi30"
+      CMAKE_CXX_FLAGS: "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat  "
+      CMAKE_CXX_FLAGS_DEBUG: "-fno-limit-debug-info "
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_COMPILER_TARGET: "armv7-none-linux-androideabi30"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp'
+        
+        Run Build Command(s): /Users/maniacsday/Library/Android/sdk/cmake/3.22.1/bin/ninja -v cmTC_51f81
+        [1/2] /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat    -fPIE   -v -MD -MT CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Android (12027248, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+        Target: armv7-none-linux-android30
+        Thread model: posix
+        InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin
+         (in-process)
+         "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++" -cc1 -triple thumbv7-none-linux-android30 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp -resource-dir /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.0.1 based upon LLVM 18.0.1 default target x86_64-apple-darwin27.0.0
+        ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"
+        ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi
+         /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include
+        End of search list.
+        [2/2] : && /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_51f81   && :
+        Android (12027248, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+        Target: armv7-none-linux-android30
+        Thread model: posix
+        InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin
+         "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_51f81 /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+          add: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+        collapse include dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        implicit include dirs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Users/maniacsday/Library/Android/sdk/cmake/3.22.1/bin/ninja -v cmTC_51f81]
+        ignore line: [[1/2] /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat    -fPIE   -v -MD -MT CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Android (12027248  +pgo  -bolt  +lto  -mlgo  based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+        ignore line: [Target: armv7-none-linux-android30]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++" -cc1 -triple thumbv7-none-linux-android30 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/CMakeScratch/TryCompile-EwjlMp -resource-dir /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.0.1 based upon LLVM 18.0.1 default target x86_64-apple-darwin27.0.0]
+        ignore line: [ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/arm-linux-androideabi]
+        ignore line: [ /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi30 --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -static-libstdc++ -Wl --build-id=sha1 -Wl --no-undefined-version -Wl --fatal-warnings -Wl --no-undefined -Qunused-arguments   -v CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_51f81   && :]
+        ignore line: [Android (12027248  +pgo  -bolt  +lto  -mlgo  based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+        ignore line: [Target: armv7-none-linux-android30]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_51f81 /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> linker [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_51f81 /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> linker architecture flags [-m;armelf]
+        link line: [ "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --eh-frame-hdr -m armelf_linux_eabi -pie -dynamic-linker /system/bin/linker -o cmTC_51f81 /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30 -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib -L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld] ==> ignore
+          arg [--sysroot=/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-zmax-page-size=4096] ==> ignore
+          arg [-X] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/system/bin/linker] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_51f81] ==> ignore
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o] ==> obj [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib]
+          arg [-L/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+          arg [--build-id=sha1] ==> ignore
+          arg [--no-undefined-version] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [--no-undefined] ==> ignore
+          arg [CMakeFiles/cmTC_51f81.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lc++] ==> lib [c++]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [-lc] ==> lib [c]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-ldl] ==> lib [dl]
+          arg [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o] ==> obj [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+        linker tool for 'CXX': /Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld -m;armelf
+        remove lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+        remove lib [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-arm-android.a]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/../lib] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        collapse library dir [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        implicit libs: [c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+        implicit objs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtbegin_dynamic.o;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30/crtend_android.o]
+        implicit dirs: [/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/arm;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/30;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi;/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Users/maniacsday/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" "-v"
+      LLD 18.0.1 (compatible with GNU linkers)
+...

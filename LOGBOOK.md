@@ -1,0 +1,55 @@
+# G.A.S.Y build log
+
+This is the running log. I am writing it like I actually worked through it, because that is what happened. Some things worked, some things broke, and a few things looked finished before they were actually finished.
+
+## 2026-09-30 — where we are now
+
+The Android app is installed on the OnePlus 6 and the Mac can control it through ADB. The screen branding is now **GASY** and the wake phrase in the code is **GASY**. Microphone permission is granted and AccessibilityService is enabled from the Mac.
+
+The phone screen comes up and stays alive. The native Qwen2.5 0.5B GGUF model loaded successfully on the real phone after I packaged the missing native libraries. The current model output is still not reliably strict JSON, so I am not pretending the LLM-to-action path is done.
+
+## What I built
+
+- Native Android project targeting Android 11 / API 30.
+- Mac-to-phone workflow using ADB.
+- AccessibilityService foundation for phone actions.
+- Test command path and custom HUD screen.
+- Android speech recognizer wrapper.
+- GASY wake-phrase gate.
+- Native llama.cpp JNI bridge.
+- Qwen2.5 0.5B GGUF local model path.
+- Memory/database foundation and modular interfaces for STT, TTS, wake phrase, LLM, and actions.
+
+## Failures and what happened
+
+### Termux llama-server crashed
+
+I first tried to use Termux as a local model server. The Android binary crashed because of a missing NDK linker symbol (`__NDK...hash_memory...`). That route was not stable on this phone. I stopped depending on it and embedded the llama.cpp runtime in the Android app instead.
+
+### Native model failed to load at first
+
+The first APK was missing `libomp.so`. The app installed, but the native model library could not load. I added the OpenMP library to the APK, rebuilt, and then the model loaded on the actual OnePlus.
+
+### Wake listener caused the app to stop
+
+The first wake-listener retry logic restarted SpeechRecognizer immediately inside its callback. When Android returned an error, it created an endless callback/restart loop and eventually caused an ANR/crash. I changed it to use delayed, bounded retries. After that the app stayed alive.
+
+### Android speech recognition was unavailable
+
+The phone reported speech recognition as unavailable even though the Google recognition package existed. The code was hiding that error and just returning to idle. I removed the incorrect early availability gate and added logging around recognizer startup, errors, and results. The listener can now be diagnosed instead of silently pretending everything is fine.
+
+### Mac speaker test did not trigger the phone
+
+I granted permissions, started the GASY listener over ADB, and played “GASY” from the Mac speakers. The app stayed alive, but the phone did not detect the word. This was a real test failure, not a success: the phone may not have been close enough to the speakers, and Android speech recognition may still need a working network/service configuration.
+
+## What is not finished yet
+
+- Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
+- Speaker matching/enrollment.
+- Strict JSON extraction/validation from the local model.
+- Full command vocabulary and reliable end-to-end voice action testing.
+- Background/foreground-service hardening for long-running listening.
+
+## Next sensible test
+
+Put the phone close to the Mac speaker, start **START GASY WAKE LISTENER**, say “GASY”, and check whether the screen changes to `WAKE_DETECTED gasy`. If it does not, capture the recognizer error and fix that layer before adding more LLM features.

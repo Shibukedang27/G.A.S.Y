@@ -1,0 +1,2 @@
+package com.agenthitler;
+public final class ActionResult { public final boolean success; public final String action,message; private ActionResult(boolean s,String a,String m){success=s;action=a;message=m;} public static ActionResult ok(Action a,String m){return new ActionResult(true,a.type.name(),m);} public static ActionResult fail(Action a,String m){return new ActionResult(false,a.type.name(),m);} }

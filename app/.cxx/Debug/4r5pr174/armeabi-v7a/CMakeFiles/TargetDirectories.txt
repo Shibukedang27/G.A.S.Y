@@ -1,0 +1,3 @@
+/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/agent_llm.dir
+/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/maniacsday/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/app/.cxx/Debug/4r5pr174/armeabi-v7a/CMakeFiles/rebuild_cache.dir
