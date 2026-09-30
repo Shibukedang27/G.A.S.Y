@@ -78,6 +78,8 @@ Paused microphone and speaker testing while the user is asleep. Used only ADB te
 
 TTS is configured to prefer an available local US-English female voice. If the phone has no such installed voice, Android keeps its default local voice; Apple’s Siri voice cannot be copied through Android APIs.
 
+Quiet ADB testing showed the microphone is receiving real signal (`avg=81`, `peak=2052` in one run), but Vosk produced `huh` and empty final transcripts instead of GASY. This proves the problem is recognition accuracy/endpointing, not a dead microphone. The Qwen unknown-command path reached the model but returned invalid JSON; raw model output logging is now added for the next fix.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.

@@ -1,6 +1,7 @@
 package com.agenthitler;
 
 import android.content.Context;
+import android.util.Log;
 import java.io.*;
 
 /** Runs the bundled Qwen model locally and returns only validated action plans. */
@@ -16,8 +17,10 @@ public final class LocalActionPlanner {
             if (!llm.nativeLoadModel(model.getAbsolutePath())) throw new IOException("local model failed to load");
         }
         String prompt = "You are GASY. Return JSON only, no markdown. Approved action types: HOME, BACK, RECENTS, OPEN_APP, OPEN_URL, SEARCH_WEB, OPEN_SETTINGS, VOLUME_UP, VOLUME_DOWN, VOLUME_MUTE, PLAY_MEDIA, PAUSE_MEDIA, NEXT_MEDIA, PREVIOUS_MEDIA, SCROLL, TAKE_SCREENSHOT. Return exactly {\"actions\":[{\"type\":\"...\"}]}. Command: " + command;
-        CommandPlan result = ActionJsonParser.parse(llm.nativeGenerate(prompt, 128));
-        if (result == null) result = ActionJsonParser.parse(llm.nativeGenerate(prompt + " Do not explain anything.", 128));
+        String raw = llm.nativeGenerate(prompt, 128);
+        Log.i("GASY", "LOCAL_PLAN_RAW " + raw);
+        CommandPlan result = ActionJsonParser.parse(raw);
+        if (result == null) { raw = llm.nativeGenerate(prompt + " Do not explain anything.", 128); Log.i("GASY", "LOCAL_PLAN_RETRY_RAW " + raw); result = ActionJsonParser.parse(raw); }
         if (result == null) throw new IOException("model returned invalid action JSON");
         return result;
     }
