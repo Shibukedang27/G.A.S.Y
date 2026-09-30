@@ -132,6 +132,8 @@ Vosk API inspection showed grammar-constrained recognition is available. Added a
 
 Installed the grammar-constrained debug APK on the OnePlus and started the listener from the UI over ADB. Verified `GasyListeningService isForeground=true`, process alive, and `Vosk offline STT ready` with no crash or ANR.
 
+Added a boot receiver so the opted-in GASY foreground listener starts again after device reboot. This closes the restart/background lifecycle gap; Android still requires the user to have granted microphone and Accessibility access beforehand.
+
 ## What is not finished yet
 
 - Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
