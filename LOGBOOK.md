@@ -82,6 +82,8 @@ Quiet ADB testing showed the microphone is receiving real signal (`avg=81`, `pea
 
 The next ADB Qwen run proved the native model loads (`LOCAL_MODEL_LOAD=true`, `bytes=491400032`) and returns a short 58-character response, but the parser still rejects it. Logging now escapes newlines so the exact response is visible in the next device run.
 
+The next raw response was visible: `[ {"type":"OPEN_APP"}, {"type":"OPEN_URL"}, {"type":"HOME"} ]`. The model ignored the requested object schema and omitted required arguments. The parser now understands array-shaped output for diagnostics, while the prompt explicitly forbids arrays and requires arguments; validation still rejects incomplete OPEN_APP/OPEN_URL actions.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.

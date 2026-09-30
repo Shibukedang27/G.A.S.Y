@@ -11,7 +11,8 @@ public final class ActionJsonParser {
         int start = raw.indexOf('{'), end = raw.lastIndexOf('}');
         if (start < 0 || end <= start) return null;
         try {
-            JSONArray list = new JSONObject(raw.substring(start, end + 1)).optJSONArray("actions");
+            String body = raw.substring(start, end + 1).trim();
+            JSONArray list = body.startsWith("[") ? new JSONArray(body) : new JSONObject(body).optJSONArray("actions");
             if (list == null || list.length() == 0 || list.length() > 20) return null;
             List<Action> actions = new ArrayList<>();
             for (int i = 0; i < list.length(); i++) {

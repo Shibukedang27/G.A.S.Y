@@ -18,7 +18,7 @@ public final class LocalActionPlanner {
             Log.i("GASY", "LOCAL_MODEL_LOAD=" + loaded + " bytes=" + model.length());
             if (!loaded) throw new IOException("local model failed to load");
         }
-        String prompt = "You are GASY. Return JSON only, no markdown. Approved action types: HOME, BACK, RECENTS, OPEN_APP, OPEN_URL, SEARCH_WEB, OPEN_SETTINGS, VOLUME_UP, VOLUME_DOWN, VOLUME_MUTE, PLAY_MEDIA, PAUSE_MEDIA, NEXT_MEDIA, PREVIOUS_MEDIA, SCROLL, TAKE_SCREENSHOT. Return exactly {\"actions\":[{\"type\":\"...\"}]}. Command: " + command;
+        String prompt = "You are GASY. Return one JSON object only, no markdown and no array. Schema: {\"actions\":[{\"type\":\"HOME\"}]}. Approved types: HOME, BACK, RECENTS, OPEN_APP (requires package), OPEN_URL (requires url), SEARCH_WEB (requires query), OPEN_SETTINGS, VOLUME_UP, VOLUME_DOWN, VOLUME_MUTE, PLAY_MEDIA, PAUSE_MEDIA, NEXT_MEDIA, PREVIOUS_MEDIA, SCROLL (requires direction), TAKE_SCREENSHOT. Never invent missing arguments. Command: " + command;
         String raw = llm.nativeGenerate(prompt, 128);
         Log.i("GASY", "LOCAL_PLAN_RAW_LEN=" + (raw == null ? -1 : raw.length()) + " " + (raw == null ? "null" : raw.replace("\n", "\\n")));
         CommandPlan result = ActionJsonParser.parse(raw);
