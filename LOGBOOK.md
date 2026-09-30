@@ -40,6 +40,8 @@ Added `GasyListeningService` with a persistent low-priority notification and `ST
 
 Verified on the OnePlus through ADB: Android reported `isForeground=true`, foreground notification ID `42`, the app process stayed alive, and the phone logged `Vosk offline STT ready`.
 
+Also increased retry backoff to five seconds so repeated empty/error microphone cycles do not spin hard and waste battery. The listener still remains available for the next real phrase.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
