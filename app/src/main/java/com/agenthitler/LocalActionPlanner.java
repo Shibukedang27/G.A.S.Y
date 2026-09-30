@@ -15,8 +15,9 @@ public final class LocalActionPlanner {
             llm = new NativeLlm();
             if (!llm.nativeLoadModel(model.getAbsolutePath())) throw new IOException("local model failed to load");
         }
-        String prompt = "You are GASY. Return JSON only, no markdown. Approved action types: HOME, BACK, RECENTS, OPEN_APP, OPEN_URL, SEARCH_WEB, OPEN_SETTINGS, VOLUME_UP, VOLUME_DOWN, VOLUME_MUTE, PLAY_MEDIA, PAUSE_MEDIA, NEXT_MEDIA, PREVIOUS_MEDIA, SCROLL, TAKE_SCREENSHOT. For the command below return exactly {\\\"actions\\\":[{\\\"type\\\":\\\"...\\\"}]}. Command: " + command;
-        CommandPlan result = ActionJsonParser.parse(llm.nativeGenerate(prompt, 96));
+        String prompt = "You are GASY. Return JSON only, no markdown. Approved action types: HOME, BACK, RECENTS, OPEN_APP, OPEN_URL, SEARCH_WEB, OPEN_SETTINGS, VOLUME_UP, VOLUME_DOWN, VOLUME_MUTE, PLAY_MEDIA, PAUSE_MEDIA, NEXT_MEDIA, PREVIOUS_MEDIA, SCROLL, TAKE_SCREENSHOT. Return exactly {\"actions\":[{\"type\":\"...\"}]}. Command: " + command;
+        CommandPlan result = ActionJsonParser.parse(llm.nativeGenerate(prompt, 128));
+        if (result == null) result = ActionJsonParser.parse(llm.nativeGenerate(prompt + " Do not explain anything.", 128));
         if (result == null) throw new IOException("model returned invalid action JSON");
         return result;
     }

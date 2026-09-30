@@ -70,6 +70,8 @@ The Mac-speaker end-to-end test still did not produce a GASY transcript; the HUD
 
 The new ADB command path was tested on-device. `settings` successfully opened `com.android.settings/.homepage.SettingsHomepageActivity`. `open YouTube` reached the executor and returned `App not installed: com.google.android.youtube`, which is the correct controlled failure for this phone rather than a silent no-op. The command screen and received-command logging are now part of the test path.
 
+Found and fixed a local-Qwen prompt bug: the JSON example was being sent with literal escape characters, making strict parsing less likely to succeed. The planner now sends a clean JSON schema prompt, retries once on malformed output, and the validator checks required arguments for app, URL, search, and scroll actions.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
