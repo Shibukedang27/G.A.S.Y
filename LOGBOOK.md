@@ -66,6 +66,8 @@ Added a command text box and `SEND COMMAND` button to the GASY HUD. Added the `c
 
 TTS now prefers an available local US-English female voice to make the response closer to a Siri-like voice. Apple’s proprietary Siri voice itself cannot be installed through Android APIs.
 
+The Mac-speaker end-to-end test still did not produce a GASY transcript; the HUD stayed at `IDLE — waiting for GASY`. I added a six-second bounded Vosk window and final-transcript logging so the next attempt cannot hang silently. This remains an open microphone verification failure, not a claimed success.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
