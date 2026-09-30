@@ -30,6 +30,10 @@ The offline STT is now connected to the existing command path instead of stoppin
 
 Added the first strict JSON boundary for the local model. It accepts only an `actions` array, limits the number of actions, maps types to the approved `Action.Type` enum, and rejects malformed or unknown output before AccessibilityService sees it. The native Qwen planner still needs to be wired into this parser next.
 
+## 2026-10-01 — local Qwen action planning wired
+
+Unknown speech commands now go to the bundled Qwen model on-device, not to a cloud service. The model output passes through the strict JSON parser and only then reaches the action executor. The simple command router remains the fast path; Qwen is the fallback for commands it does not know yet.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
