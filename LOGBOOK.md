@@ -54,6 +54,12 @@ Added local voice-profile storage and an enrollment button. GASY records a short
 
 The foreground service now checks the stored profile after a wake phrase before sending the wake event to the UI. If no profile exists it keeps compatibility and allows the wake; after enrollment a non-matching sample is dropped locally.
 
+## 2026-10-01 — release build and locked-screen verification
+
+The first release build was rejected by lint because target API 30 is expired. I moved the project to target API 35 and added the microphone foreground-service permission. The unsigned APK also correctly failed installation because it had no certificate, so I signed the local release artifact with the development keystore for device verification.
+
+The signed release APK is about 550 MB because it contains both the Vosk model and Qwen model. It installed on the OnePlus, the app process stayed alive, and Android reported `GasyListeningService isForeground=true` after the listener was started and the screen was locked.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
