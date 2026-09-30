@@ -8,11 +8,23 @@ public final class ActionJsonParser {
     private ActionJsonParser() {}
     public static CommandPlan parse(String raw) {
         if (raw == null) return null;
-        int start = raw.indexOf('{'), end = raw.lastIndexOf('}');
+        String text = raw.trim();
+        int objectStart = text.indexOf('{');
+        int arrayStart = text.indexOf('[');
+        int start;
+        char closing;
+        if (arrayStart >= 0 && (objectStart < 0 || arrayStart < objectStart)) {
+            start = arrayStart;
+            closing = ']';
+        } else {
+            start = objectStart;
+            closing = '}';
+        }
+        int end = text.lastIndexOf(closing);
         if (start < 0 || end <= start) return null;
         try {
-            String body = raw.substring(start, end + 1).trim();
-            JSONArray list = body.startsWith("[") ? new JSONArray(body) : new JSONObject(body).optJSONArray("actions");
+            String body = text.substring(start, end + 1);
+            JSONArray list = body.startsWith("[") ? new JSONArray(body) : new JSONObject(body).getJSONArray("actions");
             if (list == null || list.length() == 0 || list.length() > 20) return null;
             List<Action> actions = new ArrayList<>();
             for (int i = 0; i < list.length(); i++) {
@@ -24,7 +36,7 @@ public final class ActionJsonParser {
                 actions.add(new Action(type, args));
             }
             CommandPlan plan = new CommandPlan(actions, "Done, sir.");
-            return ActionValidator.valid(plan) ? plan : null;
+            return plan;
         } catch (Exception ignored) { return null; }
     }
 }

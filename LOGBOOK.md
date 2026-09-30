@@ -149,3 +149,10 @@ Added a user-controlled battery optimization flow. The HUD now has `ALLOW GASY B
 ## Next sensible test
 
 Put the phone close to the Mac speaker, start **START GASY WAKE LISTENER**, say “GASY”, and check whether the screen changes to `WAKE_DETECTED gasy`. If it does not, capture the recognizer error and fix that layer before adding more LLM features.
+# 2026-10-01 — JSON parser unit-test failure and fix
+
+- First local test run failed: `8 tests completed, 2 failed` in the new parser tests.
+- Root cause was two separate things: array-shaped model output was not being detected by the parser, and Android's platform `org.json` methods are not mocked in plain JVM unit tests.
+- Fixed parser boundary detection for both `{...}` and `[...]` output and kept validation at the execution boundary.
+- Reworked the JVM tests to cover the pure validator (safe plan accepted, missing required argument rejected). Full `gradle test --no-daemon` now passes: debug and release unit tests successful.
+- Honest limitation: raw Android `org.json` parsing still needs an on-device/instrumented test; this local run does not pretend to prove it.
