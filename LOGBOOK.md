@@ -162,3 +162,10 @@ Put the phone close to the Mac speaker, start **START GASY WAKE LISTENER**, say 
 - OnePlus ADB serial `fc8f4a02` was online.
 - Debug APK assembled, installed with `adb install -r`, and returned `Success`.
 - Typed ADB command `open settings` launched `com.agenthitler/.MainActivity`; no microphone or speaker test was run while the user was sleeping.
+
+# 2026-10-01 — Qwen native output and accessibility verification
+
+- Correctly quoted ADB text reached the app as the full command `launch app`.
+- The bundled 0.5B Qwen model loaded on-device (`LOCAL_MODEL_LOAD=true`, `491400032` bytes).
+- Its native output was prompt-echoed, but the final approved fragment was `{"action":"RECENTS"}`. The parser now accepts that single-action form only when it is a known approved action; no retry was triggered.
+- The action did not execute because the phone's Accessibility service was disabled/crashed (`AccessibilityService unavailable, sir.` and Android reported the service in `Crashed services`). This is a real device blocker, not marked as success. It needs repair/re-enable before full phone-action verification.
