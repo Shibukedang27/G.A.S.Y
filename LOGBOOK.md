@@ -8,6 +8,12 @@ The Android app is installed on the OnePlus 6 and the Mac can control it through
 
 The phone screen comes up and stays alive. The native Qwen2.5 0.5B GGUF model loaded successfully on the real phone after I packaged the missing native libraries. The current model output is still not reliably strict JSON, so I am not pretending the LLM-to-action path is done.
 
+## 2026-09-30 — offline STT step
+
+I changed the speech recognizer request to explicitly prefer offline recognition and added separate offline-ready/error/result logs. This means the app will ask the phone’s installed recognition service to keep recognition on-device instead of silently depending on cloud recognition.
+
+Important honest bit: this is the Android offline-recognition path, not a bundled neural STT model yet. If the OnePlus does not have an English offline language pack installed, Android will still fail or fall back according to the phone’s service. The next check is to run GASY on the phone with internet disabled and see the actual result.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
