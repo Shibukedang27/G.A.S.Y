@@ -130,6 +130,8 @@ I granted permissions, started the GASY listener over ADB, and played “GASY”
 
 Vosk API inspection showed grammar-constrained recognition is available. Added a local grammar containing GASY variants plus supported command words and `[unk]`, so wake words are no longer competing against the full English vocabulary. This is intended to address the observed `huh` transcript while keeping command words available after wake.
 
+Installed the grammar-constrained debug APK on the OnePlus and started the listener from the UI over ADB. Verified `GasyListeningService isForeground=true`, process alive, and `Vosk offline STT ready` with no crash or ANR.
+
 ## What is not finished yet
 
 - Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
