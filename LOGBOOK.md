@@ -156,3 +156,9 @@ Put the phone close to the Mac speaker, start **START GASY WAKE LISTENER**, say 
 - Fixed parser boundary detection for both `{...}` and `[...]` output and kept validation at the execution boundary.
 - Reworked the JVM tests to cover the pure validator (safe plan accepted, missing required argument rejected). Full `gradle test --no-daemon` now passes: debug and release unit tests successful.
 - Honest limitation: raw Android `org.json` parsing still needs an on-device/instrumented test; this local run does not pretend to prove it.
+
+# 2026-10-01 — Quiet ADB smoke check
+
+- OnePlus ADB serial `fc8f4a02` was online.
+- Debug APK assembled, installed with `adb install -r`, and returned `Success`.
+- Typed ADB command `open settings` launched `com.agenthitler/.MainActivity`; no microphone or speaker test was run while the user was sleeping.
