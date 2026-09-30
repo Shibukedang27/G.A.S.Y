@@ -4,6 +4,9 @@ public final class CommandRouter {
   public static CommandPlan parse(String raw){ String s=raw==null?"":raw.trim().toLowerCase(Locale.US); if(s.isEmpty()) return null; List<Action>a=new ArrayList<>();
     if(s.matches("open youtube|launch youtube")){a.add(openApp("com.google.android.youtube"));}
     else if(s.matches("open chrome|launch chrome")){a.add(openApp("com.android.chrome"));}
+    else if(s.matches("open calculator|launch calculator")){a.add(openApp("com.oneplus.calculator"));}
+    else if(s.matches("open phone|launch phone|open dialer")){a.add(openApp("com.android.dialer"));}
+    else if(s.matches("open messages|launch messages|open sms")){a.add(openApp("com.android.mms"));}
     else if(s.matches("go home|home")) a.add(new Action(Action.Type.HOME,null));
     else if(s.matches("go back|back")) a.add(new Action(Action.Type.BACK,null));
     else if(s.matches("take a screenshot|screenshot")) a.add(new Action(Action.Type.TAKE_SCREENSHOT,null));

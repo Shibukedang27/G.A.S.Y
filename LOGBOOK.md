@@ -84,6 +84,8 @@ The next ADB Qwen run proved the native model loads (`LOCAL_MODEL_LOAD=true`, `b
 
 The next raw response was visible: `[ {"type":"OPEN_APP"}, {"type":"OPEN_URL"}, {"type":"HOME"} ]`. The model ignored the requested object schema and omitted required arguments. The parser now understands array-shaped output for diagnostics, while the prompt explicitly forbids arrays and requires arguments; validation still rejects incomplete OPEN_APP/OPEN_URL actions.
 
+Added deterministic mappings for common phone commands: calculator, phone/dialer, and messages/SMS. These go through the normal package-installed check and return a controlled error if that app is absent instead of sending the request to the weak local planner.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
