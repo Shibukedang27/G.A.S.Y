@@ -46,6 +46,8 @@ Also increased retry backoff to five seconds so repeated empty/error microphone 
 
 Added a central action-confirmation policy. Calls, SMS, and destructive-content action types are now classified as sensitive and are rejected at the execution boundary until an explicit confirmation UI is connected. The model cannot silently perform those actions just by producing JSON.
 
+The confirmation boundary is now a real dialog: sensitive actions show Cancel and Confirm buttons, and only Confirm reaches AccessibilityService.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
