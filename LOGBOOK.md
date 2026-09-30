@@ -34,6 +34,12 @@ Added the first strict JSON boundary for the local model. It accepts only an `ac
 
 Unknown speech commands now go to the bundled Qwen model on-device, not to a cloud service. The model output passes through the strict JSON parser and only then reaches the action executor. The simple command router remains the fast path; Qwen is the fallback for commands it does not know yet.
 
+## 2026-10-01 — foreground listening completed
+
+Added `GasyListeningService` with a persistent low-priority notification and `START_STICKY`. The Vosk microphone loop now runs from the foreground service, so the UI can leave the foreground without being the only owner of the listener.
+
+Verified on the OnePlus through ADB: Android reported `isForeground=true`, foreground notification ID `42`, the app process stayed alive, and the phone logged `Vosk offline STT ready`.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.

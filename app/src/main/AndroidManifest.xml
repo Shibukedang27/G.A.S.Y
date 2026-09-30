@@ -17,5 +17,6 @@
         <service android:name=".AgentVoiceInteractionService" android:permission="android.permission.BIND_VOICE_INTERACTION" android:exported="true">
             <intent-filter><action android:name="android.service.voice.VoiceInteractionService" /></intent-filter>
         </service>
+        <service android:name=".GasyListeningService" android:foregroundServiceType="microphone" android:exported="false" />
     </application>
 </manifest>

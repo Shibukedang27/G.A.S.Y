@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     private AssistantState state=AssistantState.IDLE;
     private WakePhraseListener wake;
     private LocalActionPlanner planner;
+    private final android.content.BroadcastReceiver wakeReceiver = new android.content.BroadcastReceiver(){ public void onReceive(android.content.Context c, android.content.Intent i){ String r=i.getStringExtra("remainder"); runOnUiThread(()->{ setState(AssistantState.LISTENING,"GASY DETECTED"); if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake"); if(r==null||r.isEmpty())listenTextOnly(); else routeRecognized(r); }); }};
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         LinearLayout root = new LinearLayout(this); root.setOrientation(LinearLayout.VERTICAL); root.setPadding(40,60,40,40); root.setGravity(Gravity.CENTER_HORIZONTAL); root.setBackgroundColor(Color.rgb(10,10,10));
@@ -41,12 +42,13 @@ public class MainActivity extends Activity {
         memory = new AssistantMemory(this);
         wake = new WakePhraseListener(speech);
         planner = new LocalActionPlanner(this);
+        registerReceiver(wakeReceiver, new android.content.IntentFilter(GasyListeningService.ACTION_WAKE));
         if(ACTION_INSTALL_LLM.equals(getIntent().getAction())) installLocalLlm();
         if(ACTION_TEST_LLM.equals(getIntent().getAction())) testLocalLlm();
         if(ACTION_TEST_NATIVE.equals(getIntent().getAction())) testNativeLlm();
     }
     private void listen(){ if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;} setState(AssistantState.LISTENING,"LISTENING..."); speech.start(r->{runOnUiThread(()->{if(!r.success){memory.record("<speech>",false,r.error);setState(AssistantState.ERROR,"I couldn't hear that, sir.");return;} setState(AssistantState.PROCESSING,"Heard: "+r.text); CommandPlan p=CommandRouter.parse(r.text); if(!ActionValidator.valid(p)){memory.record(r.text,false,"Unknown command");setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;} if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;} setState(AssistantState.EXECUTING,"EXECUTING..."); ActionResult ar=AgentAccessibilityService.instance.execute(p.actions.get(0));memory.record(r.text,ar.success,ar.message);setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message); if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"agent-response");});}); }
-    private void startWakeListener(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.IDLE,"IDLE — waiting for GASY");wake.start((phrase,remainder)->runOnUiThread(()->{setState(AssistantState.LISTENING,"GASY DETECTED");if(tts!=null)tts.speak("Yes, sir.",TextToSpeech.QUEUE_FLUSH,null,"wake");if(remainder.isEmpty())listenTextOnly();else routeRecognized(remainder);}));}
+    private void startWakeListener(){if(checkSelfPermission("android.permission.RECORD_AUDIO")!=PackageManager.PERMISSION_GRANTED){requestPermissions(new String[]{"android.permission.RECORD_AUDIO"},42);return;}setState(AssistantState.IDLE,"IDLE — waiting for GASY");Intent i=new Intent(this,GasyListeningService.class);if(android.os.Build.VERSION.SDK_INT>=26)startForegroundService(i);else startService(i);}
     private void listenTextOnly(){setState(AssistantState.LISTENING,"LISTENING...");speech.start(r->{runOnUiThread(()->{if(r.success)routeRecognized(r.text);else setState(AssistantState.ERROR,"I couldn't hear that, sir.");});});}
     private void routeRecognized(String text){CommandPlan p=CommandRouter.parse(text);if(!ActionValidator.valid(p)){setState(AssistantState.PROCESSING,"THINKING LOCALLY...");final String command=text;new Thread(()->{try{CommandPlan generated=planner.plan(command);runOnUiThread(()->executePlan(generated));}catch(Exception e){Log.e("GASY","LOCAL_PLAN_FAILED",e);runOnUiThread(()->setState(AssistantState.ERROR,"I couldn't build a valid local action, sir."));}}).start();return;}executePlan(p);}
     private void executePlan(CommandPlan p){if(!ActionValidator.valid(p)){setState(AssistantState.ERROR,"I couldn't understand that, sir.");return;}if(AgentAccessibilityService.instance==null){setState(AssistantState.ERROR,"AccessibilityService unavailable, sir.");return;}setState(AssistantState.EXECUTING,"EXECUTING...");ActionResult ar=AgentAccessibilityService.instance.execute(p.actions.get(0));setState(ar.success?AssistantState.SUCCESS:AssistantState.ERROR,ar.success?"Done, sir.":"I couldn't complete that, sir. "+ar.message);if(tts!=null)tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"response");}
@@ -67,6 +69,6 @@ public class MainActivity extends Activity {
         status.setText(result.success ? "Done, sir. Test action completed." : "I couldn't complete that, sir. " + result.message);
         if(tts!=null) tts.speak(status.getText(),TextToSpeech.QUEUE_FLUSH,null,"agent-response");
     }
-    @Override protected void onDestroy(){if(wake!=null)wake.stop();if(speech!=null)speech.destroy();if(planner!=null)planner.close();if(tts!=null){tts.stop();tts.shutdown();}super.onDestroy();}
+    @Override protected void onDestroy(){try{unregisterReceiver(wakeReceiver);}catch(Exception ignored){}if(wake!=null)wake.stop();if(speech!=null)speech.destroy();if(planner!=null)planner.close();if(tts!=null){tts.stop();tts.shutdown();}super.onDestroy();}
     @Override protected void onNewIntent(Intent intent) { super.onNewIntent(intent); if (ACTION_TEST.equals(intent.getAction())) handleTest(); if (ACTION_INSTALL_LLM.equals(intent.getAction())) installLocalLlm(); if (ACTION_TEST_LLM.equals(intent.getAction())) testLocalLlm(); if (ACTION_TEST_NATIVE.equals(intent.getAction())) testNativeLlm(); }
 }
