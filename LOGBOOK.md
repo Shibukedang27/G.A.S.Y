@@ -86,6 +86,8 @@ The next raw response was visible: `[ {"type":"OPEN_APP"}, {"type":"OPEN_URL"}, 
 
 Added deterministic mappings for common phone commands: calculator, phone/dialer, and messages/SMS. These go through the normal package-installed check and return a controlled error if that app is absent instead of sending the request to the weak local planner.
 
+Wake matching now accepts the controlled Vosk variants `gasy`, `gasi`, `gassy`, and `gassie`, while still requiring the whole recognized text to start with one of those phrases. This handles common STT spelling variants without opening the gate for arbitrary speech.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
