@@ -68,6 +68,8 @@ TTS now prefers an available local US-English female voice to make the response 
 
 The Mac-speaker end-to-end test still did not produce a GASY transcript; the HUD stayed at `IDLE — waiting for GASY`. I added a six-second bounded Vosk window and final-transcript logging so the next attempt cannot hang silently. This remains an open microphone verification failure, not a claimed success.
 
+The new ADB command path was tested on-device. `settings` successfully opened `com.android.settings/.homepage.SettingsHomepageActivity`. `open YouTube` reached the executor and returned `App not installed: com.google.android.youtube`, which is the correct controlled failure for this phone rather than a silent no-op. The command screen and received-command logging are now part of the test path.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
