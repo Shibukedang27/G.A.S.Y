@@ -28,7 +28,8 @@ public final class VoskOfflineSpeechRecognizer implements SpeechRecognizerEngine
                 if (model == null) model = new Model(unpackModel());
                 int min = AudioRecord.getMinBufferSize(16000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
                 recorder = new AudioRecord(MediaRecorder.AudioSource.MIC, 16000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, Math.max(min * 2, 8192));
-                Recognizer recognizer = new Recognizer(model, 16000);
+                String grammar = "[\"gasy\",\"gasi\",\"gassy\",\"gassie\",\"open\",\"settings\",\"calculator\",\"phone\",\"messages\",\"home\",\"back\",\"screenshot\",\"volume\",\"up\",\"down\",\"[unk]\"]";
+                Recognizer recognizer = new Recognizer(model, 16000, grammar);
                 byte[] buffer = new byte[Math.max(min, 4096)];
                 long samples = 0; long energy = 0; int peak = 0;
                 running = true; recorder.startRecording();
