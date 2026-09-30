@@ -80,6 +80,8 @@ TTS is configured to prefer an available local US-English female voice. If the p
 
 Quiet ADB testing showed the microphone is receiving real signal (`avg=81`, `peak=2052` in one run), but Vosk produced `huh` and empty final transcripts instead of GASY. This proves the problem is recognition accuracy/endpointing, not a dead microphone. The Qwen unknown-command path reached the model but returned invalid JSON; raw model output logging is now added for the next fix.
 
+The next ADB Qwen run proved the native model loads (`LOCAL_MODEL_LOAD=true`, `bytes=491400032`) and returns a short 58-character response, but the parser still rejects it. Logging now escapes newlines so the exact response is visible in the next device run.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
