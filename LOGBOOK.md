@@ -136,6 +136,8 @@ Added a boot receiver so the opted-in GASY foreground listener starts again afte
 
 Fixed multi-action execution: validated plans now execute sequentially, stop immediately on the first failure, and show one confirmation dialog if any action in the plan is sensitive. Previously only the first action was executed.
 
+Added a user-controlled battery optimization flow. The HUD now has `ALLOW GASY BACKGROUND BATTERY`, which opens Android’s per-app battery exemption screen, with a settings fallback if the direct intent is unavailable.
+
 ## What is not finished yet
 
 - Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
