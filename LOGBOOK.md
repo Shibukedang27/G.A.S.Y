@@ -52,6 +52,8 @@ The confirmation boundary is now a real dialog: sensitive actions show Cancel an
 
 Added local voice-profile storage and an enrollment button. GASY records a short microphone sample and stores only a small local fingerprint made from amplitude and zero-crossing features. This is a lightweight gate, not a full neural speaker-embedding system yet; the heavier speaker model remains a later upgrade.
 
+The foreground service now checks the stored profile after a wake phrase before sending the wake event to the UI. If no profile exists it keeps compatibility and allows the wake; after enrollment a non-matching sample is dropped locally.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
