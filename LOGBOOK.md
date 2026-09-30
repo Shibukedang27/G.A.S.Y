@@ -134,6 +134,8 @@ Installed the grammar-constrained debug APK on the OnePlus and started the liste
 
 Added a boot receiver so the opted-in GASY foreground listener starts again after device reboot. This closes the restart/background lifecycle gap; Android still requires the user to have granted microphone and Accessibility access beforehand.
 
+Fixed multi-action execution: validated plans now execute sequentially, stop immediately on the first failure, and show one confirmation dialog if any action in the plan is sensitive. Previously only the first action was executed.
+
 ## What is not finished yet
 
 - Real low-power neural wake-word model. Current GASY detection uses Android SpeechRecognizer, so it is not yet an always-on offline keyword engine.
