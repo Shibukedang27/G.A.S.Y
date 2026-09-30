@@ -30,17 +30,20 @@ public final class VoskOfflineSpeechRecognizer implements SpeechRecognizerEngine
                 recorder = new AudioRecord(MediaRecorder.AudioSource.MIC, 16000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, Math.max(min * 2, 8192));
                 Recognizer recognizer = new Recognizer(model, 16000);
                 byte[] buffer = new byte[Math.max(min, 4096)];
+                long samples = 0; long energy = 0; int peak = 0;
                 running = true; recorder.startRecording();
                 Log.i("GASY", "Vosk offline STT ready");
                 long deadline = System.currentTimeMillis() + 6000;
                 while (running) {
                     int n = recorder.read(buffer, 0, buffer.length);
+                    for (int j = 0; j + 1 < n; j += 2) { int v = Math.abs((short)((buffer[j] & 255) | (buffer[j + 1] << 8))); energy += v; if (v > peak) peak = v; samples++; }
                     if (n > 0 && recognizer.acceptWaveForm(buffer, n)) {
                         String text = extract(recognizer.getResult());
                         if (!text.isEmpty()) { cb.onResult(SpeechResult.ok(text)); break; }
                     }
                     if (System.currentTimeMillis() >= deadline) {
                         String text = extract(recognizer.getFinalResult());
+                        Log.i("GASY", "Vosk audio samples=" + samples + " avg=" + (samples == 0 ? 0 : energy / samples) + " peak=" + peak);
                         Log.i("GASY", "Vosk final transcript: " + text);
                         cb.onResult(text.isEmpty() ? SpeechResult.fail("No offline speech recognized") : SpeechResult.ok(text));
                         break;

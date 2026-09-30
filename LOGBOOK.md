@@ -72,6 +72,12 @@ The new ADB command path was tested on-device. `settings` successfully opened `c
 
 Found and fixed a local-Qwen prompt bug: the JSON example was being sent with literal escape characters, making strict parsing less likely to succeed. The planner now sends a clean JSON schema prompt, retries once on malformed output, and the validator checks required arguments for app, URL, search, and scroll actions.
 
+## 2026-10-01 — quiet ADB-only testing
+
+Paused microphone and speaker testing while the user is asleep. Used only ADB text commands. The command `settings` reached the rule router and opened `com.android.settings/.homepage.SettingsHomepageActivity`; the GASY process stayed alive and there was no crash or ANR. Vosk now logs microphone sample count, average level, peak, and final transcript for a later non-disruptive microphone test.
+
+TTS is configured to prefer an available local US-English female voice. If the phone has no such installed voice, Android keeps its default local voice; Apple’s Siri voice cannot be copied through Android APIs.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
