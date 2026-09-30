@@ -7,6 +7,12 @@ public final class CommandRouter {
     else if(s.matches("go home|home")) a.add(new Action(Action.Type.HOME,null));
     else if(s.matches("go back|back")) a.add(new Action(Action.Type.BACK,null));
     else if(s.matches("take a screenshot|screenshot")) a.add(new Action(Action.Type.TAKE_SCREENSHOT,null));
+    else if(s.matches("open settings|settings")) a.add(new Action(Action.Type.OPEN_SETTINGS,null));
+    else if(s.matches("mute volume|volume mute|mute")) a.add(new Action(Action.Type.VOLUME_MUTE,null));
+    else if(s.matches("play music|play media")) a.add(new Action(Action.Type.PLAY_MEDIA,null));
+    else if(s.matches("pause music|pause media")) a.add(new Action(Action.Type.PAUSE_MEDIA,null));
+    else if(s.matches("next song|next media")) a.add(new Action(Action.Type.NEXT_MEDIA,null));
+    else if(s.matches("previous song|previous media")) a.add(new Action(Action.Type.PREVIOUS_MEDIA,null));
     else if(s.matches("turn volume up|volume up")) a.add(new Action(Action.Type.VOLUME_UP,null));
     else if(s.matches("turn volume down|volume down")) a.add(new Action(Action.Type.VOLUME_DOWN,null));
     else if(s.matches("scroll down|scroll up")){Map<String,Object>m=new HashMap<>();m.put("direction",s.endsWith("up")?"up":"down");a.add(new Action(Action.Type.SCROLL,m));}

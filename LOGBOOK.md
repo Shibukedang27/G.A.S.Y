@@ -22,6 +22,10 @@ I installed the new APK on the OnePlus, granted microphone and Accessibility per
 
 Next things after this step: verify that Vosk returns the word GASY from the actual microphone, then connect the recognized command text to the action router and only after that connect the local LLM JSON parser.
 
+## 2026-10-01 — command path expansion
+
+The offline STT is now connected to the existing command path instead of stopping at transcription. GASY detection hands the remaining speech to the router, and the router can now handle app opening, home/back, screenshots, settings, volume, media controls, scrolling, and web search. The app still validates the action before AccessibilityService executes it.
+
 ## What I built
 
 - Native Android project targeting Android 11 / API 30.
